@@ -15,8 +15,8 @@ def sliding_windows(df: pd.DataFrame, window_size=21, max_gap_allowed=5):
     for w in windows:
         cnt += 1
         deltas = w.index.diff()
-        no_max_gap = len(w) >= window_size and (deltas[1:] < timedelta(days=max_gap_allowed)).all() # deltas[1:] because first is always NaT
-        if no_max_gap:
+        valid_condition = len(w) >= window_size and (deltas[1:] < timedelta(days=max_gap_allowed)).all() # deltas[1:] because first is always NaT
+        if valid_condition:
             valid_windows.append(( w.index[-1], w))
     return valid_windows
 

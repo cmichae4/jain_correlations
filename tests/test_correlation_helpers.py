@@ -23,7 +23,6 @@ class TestCorrelationHelpersClass:
         assert(all([len(window) == 2 for window in valid_windows]))
         (window_end_date, sub_df) = valid_windows[0]
         assert(window_end_date == datetime.datetime(2020,1,2))
-        # TODO: Add a test to cover the max gap case for invalid window
 
     def test_correlation_matrix(self):
         df = load_from_parquet("sample_data")

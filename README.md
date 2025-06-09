@@ -34,7 +34,7 @@ that the values seen are accurate, with the risk that less values will be presen
     - Two of the files had different data formats to the rest, but it seems like csv date parsing handled those.
  - Window handling:
    - Our window handling reflects the same objective / priority as above. We only include valid windows. These are defined as at least
-   twenty trading days preceding target date, and no more than 5 days between consecutive dates. We also (should set a limit on total window difference around 30 days).
+   twenty trading days preceding target date, and no more than 5 days between consecutive dates.
    - Other approaches could be argued here, but again, we take the perspective of these correlations potentially being signals,
    so the higher the statistical significance of these measures, the better, under this assumption.
    
