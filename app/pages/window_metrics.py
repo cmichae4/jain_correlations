@@ -33,14 +33,14 @@ if "ticker_select" not in st.session_state:
     st.session_state.ticker_select = p_table.columns[0]
 
 st.session_state.target_date = st.sidebar.selectbox(
-    label="Select date for correlation matrix",
+    label="Select end date for lookback window",
     options=available_dates,
     format_func=lambda x: x.date().isoformat(),
     index=available_dates.index(st.session_state.target_date) if "target_date" in st.session_state else 0,
 )
 
 st.session_state.ticker_select = st.sidebar.selectbox(
-    label="Select Ticker for Timeseries display",
+    label="Select Ticker for granular correlation information",
     options=p_table.columns,
     index=p_table.columns.get_loc(st.session_state.ticker_select) if "ticker_select" in st.session_state else 0,
 )

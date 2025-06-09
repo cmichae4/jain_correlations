@@ -1,7 +1,4 @@
 import pytest
-from streamlit import columns
-
-from src.correlation import correlation
 from src.preprocess import load_from_parquet
 
 
