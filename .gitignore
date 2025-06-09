@@ -20,7 +20,8 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
-
+.idea
+.DS
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

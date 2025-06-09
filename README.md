@@ -5,11 +5,14 @@ and calculating correlations across a universe of stocks. The project uses Pytho
 and streamlit for the application GUI.
 
 ### Data Loading
-The zipped data file should be placed in the `/data` directory. From there, you can simply call `make unzip` from the project root.
+The zipped data file should be placed in the `/data` directory and named `stock_data.zip`. From there, you can simply call `make unzip` from the project root.
 This will create two sub-directories, one called `stock_data` and one called `parquet` these store the unzipped csv files, and the
 csv's converted into `.parquet` files, respectively.
 This is a one-step process (takes less than a couple of seconds on my machine) which not only unzips the file, but also converts
 the csv data into parquet for fast downstream reading.
+
+Currently the project includes the unzipped data as an example of the output, but feel free to delete and replace with a zipped file, following
+the naming and directory directions above.
 
 ### Instructions to Run
 If you haven't yet, please read the loading data step, as this is a prerequisite for launching this app
